@@ -9,10 +9,6 @@ route add -net 161.200.90.0/24 gw 10.0.14.1
 route add -net 91.189.88.0/24 gw 10.0.14.1
 route add default gw 192.168.0.1
 route del default gw 10.0.14.1
-dpkg-reconfigure -f noninteractive tzdata
-apt-get update
-apt-get install --reinstall tzdata -y
-ntpq -p
 bash -c "echo $private1 `cat /etc/hostname` >> /etc/hosts"
 wget -q --tries=10 --timeout=20 --spider  http://archive.ubuntu.com
 if [[ $? -eq 0 ]]; then
