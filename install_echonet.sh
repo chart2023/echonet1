@@ -20,7 +20,9 @@ route add -net 10.0.14.0/24 gw 10.0.14.1
 route add -net 161.200.90.0/24 gw 10.0.14.1
 route add -net 91.189.88.0/24 gw 10.0.14.1
 route add default gw 192.168.0.1
-echo "exports.TempUpper='$TempUpper';" | tee /home/ubuntu/echonetlite/device.info
+route del default gw 10.0.14.1
+node /home/ubuntu/echonetlite/findechonet.js
+echo "exports.TempUpper='$TempUpper';" | tee --append /home/ubuntu/echonetlite/device.info
 echo "exports.TempLower='$TempLower';" | tee --append /home/ubuntu/echonetlite/device.info
 echo "exports.TempSet='$TempSet';" | tee --append /home/ubuntu/echonetlite/device.info
 echo "exports.ipself='$private_echonet';" | tee --append /home/ubuntu/echonetlite/device.info
