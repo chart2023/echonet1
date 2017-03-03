@@ -18,6 +18,7 @@ ifconfig ens3 $private_echonet netmask 255.255.255.0
 route add -net 192.168.9.0/24 gw 10.0.14.1
 route add -net 10.0.14.0/24 gw 10.0.14.1
 route add -net 161.200.90.0/24 gw 10.0.14.1
+route add -net 91.189.88.0/24 gw 10.0.14.1
 route add default gw 192.168.0.1
 echo "nscl_ip=${private}" | sudo tee --append ${HOME}/nscl_info.conf
 echo "nscl_fip=${private_floatingIp}" | sudo tee --append ${HOME}/nscl_info.conf
