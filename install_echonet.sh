@@ -28,6 +28,6 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y nodejs
 cd /home/ubuntu/echonetlite/
 cp /opt/openbaton/scripts/*.js /home/ubuntu/echonetlite/
-npm install fs 
+npm install fs moment node-uuid http node-echonet-lite xml2json mathjs xml2js
 echo "FINISH at:" $(date)
 echo "##########FINISHED############"
