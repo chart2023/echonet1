@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "STEP1: INSTANTIATE echonet gw"
 echo "START at:" $(date)
-NSCL_START_TIME=$(date)
 myhome=${HOME}
 cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 ifconfig ens3 $private_echonet netmask 255.255.255.0
